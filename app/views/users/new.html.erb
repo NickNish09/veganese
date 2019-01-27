@@ -1,5 +1,127 @@
-<h1>New User</h1>
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">Stylish Portfolio</h1>
+        <h3 class="mb-5">
+          <em>A Free Bootstrap Theme by Start Bootstrap</em>
+        </h3>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+      </div>
+      <div class="overlay"></div>
+    </header>
 
-<%= render 'form', user: @user %>
+    <!-- About -->
+    <section class="no-masthead d-flex content-section bg-light" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-<%= link_to 'Back', users_path %>
+            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <h2 class="text-dark mb-5">Escolha 5 ingredientes para satisfazer a sua fome. </h2>
+
+            <% user = @user %>
+            <%= form_with(model: user, local: true, class:"form-group d-flex") do |form| %>
+            <% if user.errors.any? %>
+                <div id="error_explanation">
+                <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+                <ul>
+                <% user.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+                </ul>
+                </div>
+            <% end %>
+
+
+            <div class="row">
+
+                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                    
+                    <%= form.text_field :ingredient_1, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 1..." %>
+                </div>
+
+                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                
+                    <%= form.text_field :ingredient_2, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 2..." %>
+                </div>
+
+                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                
+                    <%= form.text_field :ingredient_3, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 3..." %>
+                </div>
+
+                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                
+                    <%= form.text_field :ingredient_4, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 4..." %>
+                </div>
+
+                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                
+                    <%= form.text_field :ingredient_5, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 5..." %>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div align="center">
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#signup">What We Offer</a>
+        </div>
+        </div>
+
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+
+                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                    
+                    <%= form.text_field :email, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Email*" %>
+                </div>
+
+                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                    
+                    <%= form.text_field :name, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Nome*" %>
+                </div>
+
+                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                    <%= form.text_field :phone, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Telefone" %>
+                </div>
+                <div class="actions">
+                    <%= form.submit "Enviar", class: "btn btn-primary mx-auto" %>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <p class="text-muted small mb-0">Copyright © Your Website 2018</p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    
+    
+
+    <!-- Plugin JavaScript -->
+    
+
+    <!-- Custom scripts for this template -->
+    
+
+  

@@ -7,9 +7,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "vendor/bootstrap/css/bootstrap.min.css" %>
+    <%= stylesheet_link_tag "vendor/fontawesome-free/css/all.min.css" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" %>
+    <%= stylesheet_link_tag "vendor/simple-line-icons/css/simple-line-icons.css" %>
+    <%= stylesheet_link_tag "css/stylish-portfolio.css" %>
   </head>
 
   <body>
     <%= yield %>
+    <%#= javascript_include_tag "vendor/jquery/jquery.min.js" %>
+    <%= javascript_include_tag "vendor/bootstrap/js/bootstrap.bundle.min.js" %>
+    <%= javascript_include_tag "vendor/jquery-easing/jquery.easing.min.js" %>
+    <%= javascript_include_tag "js/stylish-portfolio.min.js" %>
   </body>
 </html>
