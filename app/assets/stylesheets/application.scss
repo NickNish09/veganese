@@ -15,3 +15,18 @@
  * {
     font-family: 'Indie Flower', cursive;
  }
+
+ @media (max-width: 600px){
+   .masthead {
+      background-size: cover !important;
+   }
+
+   .nomarginsmall {
+      margin-left: 0 !important;
+   }
+
+   .imgsmall {
+      width: 100% !important;
+      height: auto !important;
+   }
+ }
