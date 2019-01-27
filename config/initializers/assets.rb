@@ -22,3 +22,4 @@ Rails.application.config.assets.precompile += %w(vendor/bootstrap/js/bootstrap.b
 Rails.application.config.assets.precompile += %w(vendor/jquery-easing/jquery.easing.min.js)
 Rails.application.config.assets.precompile += %w(js/stylish-portfolio.min.js)
 Rails.application.config.assets.precompile += %w(*.jpg *.png)
+Rails.application.config.assets.precompile += %w( img/favicon.ico )
