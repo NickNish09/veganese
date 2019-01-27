@@ -1,7 +1,7 @@
     <!-- Header -->
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
-        <h1 class="mb-1">Stylish Portfolio</h1>
+        <h1 class="mb-1">Vegane-se</h1>
         <h3 class="mb-5">
           <em>A Free Bootstrap Theme by Start Bootstrap</em>
         </h3>
@@ -11,16 +11,16 @@
     </header>
 
     <!-- About -->
-    <section class="no-masthead d-flex content-section bg-light" id="about">
+    <section class="no-masthead d-flex content-section bg-warning" id="about">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <i class="far fa-spa fa-2x mb-2 text-white"></i>
             <h2 class="text-dark mb-5">Escolha 5 ingredientes para satisfazer a sua fome. </h2>
 
             <% user = @user %>
-            <%= form_with(model: user, local: true, class:"form-group d-flex") do |form| %>
+            <%= form_with(model: user, remote: true, class:"form-group d-flex") do |form| %>
             <% if user.errors.any? %>
                 <div id="error_explanation">
                 <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -35,30 +35,35 @@
 
 
             <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+            
+                        <%= form.text_field :ingredient_1, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 1..." %>
+                    </div>
 
-                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                    <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
                     
-                    <%= form.text_field :ingredient_1, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 1..." %>
-                </div>
+                        <%= form.text_field :ingredient_2, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 2..." %>
+                    </div>
 
-                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
-                
-                    <%= form.text_field :ingredient_2, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 2..." %>
-                </div>
+                    <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                    
+                        <%= form.text_field :ingredient_3, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 3..." %>
+                    </div>
 
-                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
-                
-                    <%= form.text_field :ingredient_3, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 3..." %>
-                </div>
+                    <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                    
+                        <%= form.text_field :ingredient_4, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 4..." %>
+                    </div>
 
-                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
-                
-                    <%= form.text_field :ingredient_4, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 4..." %>
-                </div>
-
-                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
-                
-                    <%= form.text_field :ingredient_5, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 5..." %>
+                    <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
+                    
+                        <%= form.text_field :ingredient_5, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Ingrediente 5..." %>
+                    </div>
+                    </div>
                 </div>
             </div>
           </div>
@@ -74,19 +79,17 @@
     <section id="signup" class="signup-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 col-lg-8 mx-auto text-center">
+          <div class="col-md-6 col-lg-6 mx-auto text-center">
 
-            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <i class="far fa-seedling fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
 
-                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
-                    
-                    <%= form.text_field :email, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Email*" %>
+                <div class="col-md-12 col-xs-12 col-sm-12 mb-4">    
+                    <%= form.text_field :name, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Nome*" %>
                 </div>
 
                 <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
-                    
-                    <%= form.text_field :name, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Nome*" %>
+                    <%= form.text_field :email, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Email*" %>
                 </div>
 
                 <div class="col-md-12 col-xs-12 col-sm-12 mb-4">
