@@ -5,6 +5,10 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @setup = Setup.last
+    clicks = @setup.clicks
+    @setup.clicks = clicks + 1
+    @setup.save
   end
 
   # GET /users/1
