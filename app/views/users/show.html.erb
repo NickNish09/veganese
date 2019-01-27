@@ -1,39 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Ingredient 1:</strong>
-  <%= @user.ingredient_1 %>
-</p>
-
-<p>
-  <strong>Ingredient 2:</strong>
-  <%= @user.ingredient_2 %>
-</p>
-
-<p>
-  <strong>Ingredient 3:</strong>
-  <%= @user.ingredient_3 %>
-</p>
-
-<p>
-  <strong>Ingredient 3:</strong>
-  <%= @user.ingredient_3 %>
-</p>
-
-<p>
-  <strong>Ingredient 4:</strong>
-  <%= @user.ingredient_4 %>
-</p>
-
-<p>
-  <strong>Ingredient 5:</strong>
-  <%= @user.ingredient_5 %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<% @users.each do |user| %>
+<%= user.email %> | 
+<%= user.phone %> | 
+<%= user.name %> | 
+<%= user.ingredient_1 %> | 
+<%= user.ingredient_2 %> | 
+<%= user.ingredient_3 %> | 
+<%= user.ingredient_4 %> | 
+<%= user.ingredient_5 %><br>
+<% end %>
