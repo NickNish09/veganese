@@ -1,11 +1,15 @@
     <!-- Header -->
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
-        <h1 class="mb-1">Vegane-se</h1>
+        <%= image_tag "img/veganeselogo.png", width: 200, height: 200 %> 
         <h3 class="mb-5">
-          <em>A Free Bootstrap Theme by Start Bootstrap</em>
+          <!--<em>
+            <p style="color: #ffff03">O que tem na sua geladeira?</p>
+          </em>-->
+          <div style="margin-left: 270px;"><p style="text-align: justify; color: #62ed58">Sugerimos receitas Veganas para que você desfrute<br> de uma alimentação mais diversificada com pratos<br> feitos a partir de seus ingredientes.</p></div>
+            <span style="color: #135416">Liste os ingredientes, receba a receita.</span><br>
         </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+        <a class="btn btn-warning btn-xl js-scroll-trigger" href="#about">Comece agora</a>
       </div>
       <div class="overlay"></div>
     </header>
@@ -16,8 +20,9 @@
         <div class="row">
           <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-            <i class="far fa-spa fa-2x mb-2 text-white"></i>
-            <h2 class="text-dark mb-5">Escolha 5 ingredientes para satisfazer a sua fome. </h2>
+            <i class="fa fa-leaf fa-2x mb-2 text-white"></i>
+
+            <h2 class="text-dark mb-5">Escolha 5 ingredientes que estejam em sua geladeira. </h2>
 
             <% user = @user %>
             <%= form_with(model: user, remote: true, class:"form-group d-flex") do |form| %>
@@ -69,7 +74,7 @@
           </div>
         </div>
         <div align="center">
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#signup">What We Offer</a>
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#signup">Continuar</a>
         </div>
         </div>
 
@@ -81,8 +86,8 @@
         <div class="row">
           <div class="col-md-6 col-lg-6 mx-auto text-center">
 
-            <i class="far fa-seedling fa-2x mb-2 text-white"></i>
-            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+            <i class="fa fa-seedling fa-2x mb-2 text-white"></i>
+            <h2 class="text-white mb-5">Coloque suas informações para receber as receitas!</h2>
 
                 <div class="col-md-12 col-xs-12 col-sm-12 mb-4">    
                     <%= form.text_field :name, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Nome*" %>
@@ -96,7 +101,7 @@
                     <%= form.text_field :phone, class:"form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", id:"inputEmail", placeholder:"Telefone" %>
                 </div>
                 <div class="actions">
-                    <%= form.submit "Enviar", class: "btn btn-primary mx-auto" %>
+                    <%= form.submit "Enviar", class: "btn btn-secondary btn-lg mx-auto" %>
                 </div>
             <% end %>
           </div>
@@ -108,7 +113,7 @@
     <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">
-        <p class="text-muted small mb-0">Copyright © Your Website 2018</p>
+        <p class="text-muted small mb-0">Copyright © Vegane-se 2019</p>
       </div>
     </footer>
 
